@@ -3,18 +3,17 @@ package com.regex;
 import java.util.Scanner;
 
 public class Regex {
-    static String VALID_MOBILE_NUMBER = "^([0-9]{2}[ ]?[6-9]?[0-9]{9})$";
+    static String VALID_PATTERN = "^([a-z]{8,})$";
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter mobile number :");
-        String name = sc.nextLine();
-        boolean valid = name.matches(VALID_MOBILE_NUMBER);
-        System.out.println(valid);
+        System.out.println("Enter Password :");
+        String name = sc.next();
+        boolean valid = name.matches(VALID_PATTERN);
         if (valid) {
-            System.out.println("Valid Mobile Number! ");
+            System.out.println("Valid Password Rule 1. ");
         } else {
-            System.out.println("Not valid number.Enter valid mobile number ");
+            System.out.println("Not valid rule for password. ");
         }
     }
 }
