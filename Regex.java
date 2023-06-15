@@ -3,18 +3,18 @@ package com.regex;
 import java.util.Scanner;
 
 public class Regex {
-    static String VALID_EMAIL_ID = "^([a-zA-Z]{3,}([.]?[A-Za-z0-9]+)?[@][a-zA-Z]+[.][a-zA-Z]{2}([.][a-zA-Z]{2})?)$";
+    static String VALID_MOBILE_NUMBER = "^([0-9]{2}[ ]?[6-9]?[0-9]{9})$";
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter valid email id :");
-        String name = sc.next();
-        boolean valid = name.matches(VALID_EMAIL_ID);
-
-        if (valid == true) {
-            System.out.println("Valid Email Id! ");
+        System.out.println("Enter mobile number :");
+        String name = sc.nextLine();
+        boolean valid = name.matches(VALID_MOBILE_NUMBER);
+        System.out.println(valid);
+        if (valid) {
+            System.out.println("Valid Mobile Number! ");
         } else {
-            System.out.println("Not valid email id.Enter Valid Email Id");
+            System.out.println("Not valid number.Enter valid mobile number ");
         }
     }
 }
