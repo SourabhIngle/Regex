@@ -7,7 +7,7 @@ public class Regex {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Password :");
+        System.out.println("Enter Password : ");
         String name = sc.next();
         boolean valid = name.matches(VALID_PASSWORD_PATTERN);
         if (valid) {
